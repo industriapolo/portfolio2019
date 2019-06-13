@@ -3,10 +3,6 @@ html {
   scroll-behavior: smooth;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   background-color: #fdfdfd;
   font-family: 'Lato', sans-serif;
@@ -209,12 +205,13 @@ section.home {
 
 .home-image {
   width: 50%;
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 0 25px;
 }
 
 .home-image figure img {
-  width: 100%;
+  max-height: 400px;
+  width: auto;
 }
 
 .home .home-content a {
@@ -260,6 +257,14 @@ h3.about-me-feature {
   font-size: 21px;
   font-weight: 400;
   margin-bottom: 25px;
+}
+
+.aboutme .wrapper {
+  align-items: flex-start;
+}
+
+.aboutme .wrapper article {
+  width: 33%;
 }
 
 /* -------------------------------------------------------------------------
@@ -633,8 +638,21 @@ MEDIA QUERIES
     width: auto;
     margin-top: 50px;
   }
+  .home-image figure img {
+    max-height: 300px;
+    width: auto;
+  }
   section.home {
     padding-top: 100px;
+  }
+  .aboutme .wrapper {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .aboutme .wrapper article {
+    width: 100%;
+    margin-bottom: 50px;
   }
   .testimonial {
     width: auto;
